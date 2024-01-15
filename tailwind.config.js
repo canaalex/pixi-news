@@ -6,6 +6,9 @@ module.exports = {
       backgroundImage: {
         background: "url('../src/assets/images/background.svg')",
       },
+      fontSize: {
+        144: "144px",
+      },
     },
   },
   plugins: [],
