@@ -11,8 +11,8 @@ const DashBoard = () => {
   const [searchWord, setSearchWord] = useState("Top News");
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [location, setLocation] = useState("Kochi");
-  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=e3766d46b3f062997e6b28af9020232e&units=metric`;
-  const newsUrl = `https://newsapi.org/v2/everything?q=${searchWord}&sortBy=publishedAt&apiKey=575a7602a51748a2b9a8c5b80f01b105&language=${selectedLanguage}`;
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER}&units=metric`;
+  const newsUrl = `https://newsapi.org/v2/everything?q=${searchWord}&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS}&language=${selectedLanguage}`;
   const getData = () => {
     axios.get(weatherUrl).then((response) => {
       setData(response.data);
