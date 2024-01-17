@@ -11,13 +11,16 @@ const DashBoard = () => {
   const [searchWord, setSearchWord] = useState("Top News");
   const [selectedLanguage, setSelectedLanguage] = useState("en");
   const [location, setLocation] = useState("Kochi");
+
   const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${process.env.REACT_APP_WEATHER}&units=metric`;
   const newsUrl = `https://newsapi.org/v2/everything?q=${searchWord}&sortBy=publishedAt&apiKey=${process.env.REACT_APP_NEWS}&language=${selectedLanguage}`;
+
   const getData = () => {
     axios.get(weatherUrl).then((response) => {
       setData(response.data);
     });
   };
+
   const getNewsData = () => {
     axios.get(newsUrl).then((response) => {
       setNewsData(response.data);
@@ -30,15 +33,18 @@ const DashBoard = () => {
       setLocation("");
     }
   }
+
   function handleNews(e) {
     if (e.key === "Enter") {
       getNewsData();
       setSearchWord("");
     }
   }
+
   function handleSelectedLanguage(e) {
     setSelectedLanguage(e.target.value);
   }
+
   useEffect(() => {
     getData();
     getNewsData();
@@ -53,7 +59,7 @@ const DashBoard = () => {
   return (
     <>
       <Header />
-      <div className="flex gap-5 mt-10 px-5 flex-col md:flex-row pb-10">
+      <div className="flex gap-5 mt-10 px-5 flex-col md:flex-row pb-20">
         <TopNewsPanel
           handleNews={handleNews}
           newsData={newsData}
