@@ -7,9 +7,9 @@ import SearchIcon from "../assets/icons/SearchIcon";
 
 const WeatherPanel = ({ getWeatherData, setLocation, data, location }) => {
   return (
-    <div className="p-4 md:p-6 w-full md:w-4/12 bg-black flex justify-center align-middle rounded-3xl bg-opacity-20 backdrop-blur-xl drop-shadow-lg text-white font-light">
+    <div className="p-4 h-3/4 md:p-6 w-full md:w-4/12 bg-black flex justify-center align-middle rounded-3xl bg-opacity-20 backdrop-blur-xl drop-shadow-lg text-white font-light">
       <div className="flex flex-col">
-        <div className="relative w-36 md:w-64">
+        <div className="relative w-36 xl:w-64">
           <input
             className="text-white w-full h-10 pl-8 pr-4 rounded-lg bg-black transition-all duration-300"
             value={location}
@@ -40,9 +40,9 @@ const WeatherPanel = ({ getWeatherData, setLocation, data, location }) => {
             </div>
           </div>
         </div>
-        <div className="mx-auto mt-0 md:mt-10">
+        <div className="mx-auto mt-0 md:mt-3">
           <div className="flex flex-col">
-            <div className="text-8xl md:text-144 font-light flex">
+            <div className="text-8xl xl:text-144 font-light flex">
               <span>{data.main ? data.main.temp : 0}</span>
               <span className="text-xl md:text-2xl font-light mt-2 md:mt-14">
                 &deg;C
@@ -55,7 +55,7 @@ const WeatherPanel = ({ getWeatherData, setLocation, data, location }) => {
             </div>
           </div>
         </div>
-        <div className="mt-10 mb-20 md:mt-20 grid grid-cols-2 gap-4 md:gap-5">
+        <div className="mt-10 mb-10 md:mb-5 md:mt-10 grid grid-cols-2 gap-4 md:gap-5">
           <div className="flex text-base md:text-lg font-normal">
             <div className="flex">
               <EyeIcon
