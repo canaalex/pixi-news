@@ -1,10 +1,12 @@
 # Snap Skye app
 Welcome to Snap Skye! This app allows you to search for news articles and get real-time weather information for any location.
+<img width="6" alt="Screenshot 2024-01-16 at 11 37 30 PM" src="https://github.com/canaalex/pixi-news/assets/62827365/93e399a1-f292-44e2-b9d0-b72c875b7c7f">
 
 ## Getting Started
 This project was bootstrapped with Create React App.
 
-npm start
+npm start!
+
 Runs the app in the development mode.
 Open http://localhost:3000 to view it in the browser.
 
